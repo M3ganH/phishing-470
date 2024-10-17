@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bob's Instagram Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffcc00; /* Yellow background */
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .header {
+            background-color: #0073e6; /* Blue background for the header */
+            padding: 20px;
+            color: white;
+            border-bottom: 5px solid #ffcc00; /* Yellow border */
+        }
+        .profile {
+            background-color: rgba(255, 255, 255, 0.9); /* White background with transparency */
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 50px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            color: #0073e6; /* Blue text */
+        }
+        .button {
+            background-color: #0073e6; /* Blue button */
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #005bb5; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Follow Bob the Minion!</h1>
+    </div>
+    <div class="profile">
+        <h2>Meet Bob!</h2>
+        <img src="bob-teddy.png" alt="Bob the Minion" width="200" height="200"> <!-- Replace with Bob's image URL -->
+        <p>Bob is a loving, friendly, and playful minion who never goes anywhere without his Teddy Bear! He loves bananas and is always ready for an adventure.</p>
+        <p>Follow Bob for exciting updates!</p>
+        <button class="button" onclick="showScamMessage();">Follow Me!</button>
+    </div>
+
+    <script>
+        function showScamMessage() {
+            const userConfirmed = confirm("Congratulations! You've won a banana-themed gift! Click OK to claim your prize. But hurry! This offer expires in 10 minutes!");
+            if (userConfirmed) {
+                // Redirect to a phishing link (for simulation purposes only)
+                window.location.href = "https://www.youtube.com/watch?v=wCkerYMffMo"; // Minion video again :))
+            }
+        }
+    </script>
+</body>
+</html>

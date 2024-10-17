@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .message {
+            font-size: 24px;
+            color: green;
+        }
+        .countdown {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">Login Successful!</div>
+    <div class="countdown">You will be redirected in <span id="timer">3</span> seconds...</div>
+
+    <script>
+        let countdown = 3; // Set the countdown starting point
+        const timerElement = document.getElementById('timer');
+
+        // Countdown function
+        const countdownTimer = setInterval(function() {
+            countdown--; // Decrease the countdown
+            timerElement.textContent = countdown; // Update the timer display
+
+            // Check if the countdown has reached zero
+            if (countdown <= 0) {
+                clearInterval(countdownTimer); // Stop the countdown
+                window.location.href = "https://www.youtube.com/watch?v=g1_K-KkEGpk"; // Redirect to Evil Minion video
+            }
+        }, 1000); // Update every second 
+    </script>
+</body>
+</html>
